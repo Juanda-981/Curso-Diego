@@ -55,14 +55,69 @@
         */
 
         .container {
-            width: 250px; /*(vw)(anchura) en este caso lo usamos para que coja el 50% de la anchura, de lo que se ve en pantalla */
-            height: 250px; /*(vh)(altura) en este caso lo usamos para que coja el 50% de la altura, de lo que se ve en pantalla */
+            width: 150px; /*(vw)(anchura) en este caso lo usamos para que coja el 50% de la anchura, de lo que se ve en pantalla */
+            height: 150px; /*(vh)(altura) en este caso lo usamos para que coja el 50% de la altura, de lo que se ve en pantalla */
             background: rgb(255, 153, 0);
-            padding: 7px;
-            border: 3px solid rgb(0, 0, 0);
-            margin: 16px;
+            padding: 10px;
             box-sizing: border-box; /*esto suma el borde, el padding y el contenido, para tener el tamaño indicado */
+            font-size: 38px;
+            overflow: hidden;
+            text-overflow: ellipsis; /*cuando se corta, termina con puntos*/
         }
+
+        .sect-flexbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border: 10px solid black;
+            width: 300px;
+        }
+        /* flex-direction: row-reverse; */
+        /* direction: rtl;  direccion de escritura (de derecha a qizquierda)  */
+        /* writing-mode: vertical-lr; */
+
+        .item {
+             border: 1px solid;
+             opacity: .9;
+             width: 100px;
+             height: 100px;
+             background: #09f;
+        }
+
+        .item:first-child {
+            background: yellow;
+        }
+
+        .item:last-child {
+            background: red;
+        }
+
+        /* .sect-flexbox {
+            margin-top: 110px;
+        } */
+
+        /* .sect-flexbox div {
+            border: 1px solid;
+            opacity: .9;
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            box-shadow: 0 0 5px 
+            #000000dd;
+            position: relative;
+        }
+
+        .sect-flexbox div:first-child {
+            background-color: yellow;
+            z-index: 3;
+        }
+        .sect-flexbox div:nth-child(2){
+            background-color: rgb(0, 132, 255);
+            z-index: 4;
+        }
+        .sect-flexbox div:last-child {
+            background-color: rgb(255, 0, 0);
+        } */
 
 
         /* el normalize.css lo que hace es que hace que los elementos se renderizen los elemento de forma consistente en diferentes navegadores  */
@@ -73,7 +128,7 @@
 
     <nav>
         <a class="link" href="">Experiencia</a>
-        <a class="link" href="">Proyectos</a>
+        <a class="link" href="flex.html">Proyectos</a>
         <a class="link" href="" target="_blank" rel="noroferrer">Notas</a>
     </nav>
 
@@ -109,7 +164,13 @@
     </main>
 
     <div class="container">
-        talvez funcionas esta caja
+        esto es un boton muy muy grande
+    </div>
+
+    <div class="sect-flexbox">
+        <div class="item">Primero</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
     </div>
     
 </body>
